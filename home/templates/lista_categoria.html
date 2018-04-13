@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+
+{% endblock %}
+{% block contenido %}
+<table border="1">
+	<h1>
+		lista de Categorias
+	</h1>
+	<tr>
+			<td>NOMBRE</td>
+			<td>DESCRIPCION</td>
+			
+			
+		</tr>
+			<br/>
+
+	{% for c in lista2 %}
+		
+
+			<tr>
+			<th><a href=" {% url 'ver_categoria' id_catg=c.id %} ">{{c.nombre}}</a></th>
+			<th>{{c.descripcion}}</th>
+			
+		</tr>
+
+	{% endfor %}
+
+</table>
+
+
+{% endblock %}

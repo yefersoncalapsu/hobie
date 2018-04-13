@@ -1,0 +1,77 @@
+body{
+	background-image: url(http://2.bp.blogspot.com/-BlvCiqNBDrI/UMYp7kO56RI/AAAAAAAAB3s/ehEVcvC7-mU/s1600/IMG_6930.jpg);
+	background-size:cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	font-family: "Homer Simpson", ;
+
+}
+.text{
+	font-family: "Homer Simpson", cursive;
+	font-size: 250%;
+
+}
+
+#navbase2{
+	background:transparent;
+	color: transparent;
+	height: 50px;
+	width: 100%;
+	margin-bottom: 190px;
+	margin-top: 20px;
+	border-bottom:1px solid #eee;
+	font-family: "Homer Simpson", cursive;
+}
+#navbase{
+
+	background:transparent;
+	color: transparent;
+	height: 70px;
+	width: 100%;
+	margin-bottom: 50px;
+	margin-top: 20px;
+	border-bottom:1px solid #eee;
+	font-family: "Homer Simpson", cursive;
+
+}
+#icono{
+	height: 25px;
+	width: 25px;
+	margin-left: 10px;
+}
+#user{
+	color: white;
+	margin-left: 900px;
+
+}
+.navbase1{
+	margin-right: 25px;
+}
+button {
+	text-decoration: none;
+}
+.navbase1 a li :hover{
+	background: #eee;
+	text-decoration: none;
+}
+#linklogout{
+	margin-left: 500px;
+}
+#linklogin{
+	float: left;
+	margin-right: 750px;
+	color: transparent;
+}
+.conten{
+	text-align: right;
+	background:transparent;
+	color: white;
+	width: 500px;
+	
+}
+.conten2{
+	text-align: right;
+	background:transparent;
+	color: white;
+	
+}

@@ -1,0 +1,17 @@
+<head>
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/estilo.css">
+
+
+	{% block title %}
+	{% endblock %}
+</head>
+<body>
+
+
+
+	{% block contenido %}
+		<h1>Gracias Por registarse</h1>
+		<a href=" {% url 'login' %} "> iniciar Sesion</a>
+	{% endblock %}
+</body>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+	{{c.nombre}}
+{% endblock %}
+{% block contenido %}
+	
+		<h1>Detalle</h1>
+		<p><b>Nombre:</b>  {{c.nombre}}</p>
+		<p><b>Descripcion:</b>  {{c.descripcion}}</p>
+		<br>
+		<button><a href=" {% url 'editar_categoria' id_catg=c.id %} ">Editar</a></button>
+		<button><a href=" {% url 'eliminar_categoria' id_catg=c.id %} ">Eliminar</a></button>
+	</div>
+	<a href="{% url 'categoria' %}">Regresar a la Lista</a>
+
+{% endblock %}

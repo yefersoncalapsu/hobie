@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+{% endblock %}
+{% block contenido %}
+
+		<form action="" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ formulario.as_m }}
+			<input class="btn secondary btn-lg btn-bloc" type="submit" value="Agregar Marca">	
+		</form>
+
+	
+{% endblock %}

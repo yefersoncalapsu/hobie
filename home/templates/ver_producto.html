@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+	{{p.nombre}}
+{% endblock %}
+{% block contenido %}
+	
+		<h1>Detalle</h1>
+		<img src="/media/{{p.foto}}" width="150px">
+		<p><b>Nombre:</b>  {{p.nombre}}</p>
+		<p><b>Descripcion:</b>  {{p.descripcion}}</p>
+		<p><b>Precio:</b> $ {{p.precio}}</p>
+		<p><b>Stock:</b> {{p.stock}} unidades</p>
+		<p><b>Marca:</b> {{p.marca}}</p>
+		{% for c in categorias %}
+			<span class="lebel lebel-info">{{c.nombre}} </span>
+		{% endfor %}
+
+		{% if p.categorias.all %}
+			<h5>Categoria</h5>
+			{% for pc in p.categorias.all %}
+				{{pc}}
+			{% endfor %}
+		{% else %}
+			<h3>Sin Categorias</h3>
+		{% endif %}
+		<br>
+		<button><a href=" {% url 'editar_producto' id_prod=p.id %} ">Editar</a></button>
+		<button><a href=" {% url 'eliminar_producto' id_prod=p.id %} ">Eliminar</a></button>
+	</div>
+	<a href="{% url 'producto' %}">Regresar a la Lista</a>
+
+{% endblock %}

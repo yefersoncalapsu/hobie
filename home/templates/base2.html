@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/estilo.css">
+
+
+	{% block title %}
+	{% endblock %}
+</head>
+<body class="container">
+	<nav id="navbase2" >
+		<ul>
+			<h4>
+				<li id="linklogin" ><a href="{%url 'login'%}"> Login </a></li>
+				<li><a href="{%url 'registrar'%}"> Registarse </a></li>
+
+			</h4>	
+		</ul>
+	</nav>
+	<div class="conten">
+		<h3>
+			{% block contenido %}
+			{% endblock %}
+		</h3>
+	</div>
+</body>
+</html>

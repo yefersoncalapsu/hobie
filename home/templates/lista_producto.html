@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}
+
+{% endblock %}
+<CENTER>
+	{% block contenido %}
+	<table  CELLPADDING=3 border="2" >
+		<h1>
+			lista de productos
+		</h1>
+		<tr>
+			<h2>
+				<td><strong>NOMBRE</strong></td>
+				<td><strong>DESCRIPCION</strong></td>
+				<td><strong>STATUS</strong></td>
+				<td><strong>PRECIO</strong></td>
+				<td><strong>STOCK</strong></td>
+				<td><strong>MARCA</strong></td>
+				
+
+
+			</h2>	
+		</tr>
+				<br/>
+
+		{% for p in lista %}
+			
+
+				<tr>
+				<th><a href=" {% url 'ver_producto' id_prod=p.id %} ">{{p.nombre}}</a></th>
+				<th>{{p.descripcion}}</th>
+				<th>{{p.status}}</th>
+				<th>{{p.precio}}</th>
+				<th>{{p.stock}}</th>
+				<th>{{p.marca}}</th>
+				
+				
+			</tr>
+
+		{% endfor %}
+
+	</table>
+</CENTER>
+
+{% endblock %}

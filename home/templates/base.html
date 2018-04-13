@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/estilo.css">
+
+
+
+
+	{% block title %}
+	{% endblock %}
+</head>
+<body class="container">
+	<nav id="navbase">
+		<ul>
+			<h4><div id="user">{{user.username}}<img id="icono" src="https://image.freepik.com/free-icon/user-image-with-black-background_318-34564.jpg"></div></h4>
+			<h4 class="row">
+				<li class="navbase1"><a href="{%url 'producto'%}">Productos</a></li>
+				<li class="navbase1"><a href="{%url 'categoria'%}">Categorias</a></li>
+				<li class="navbase1"><a href="{%url 'marca'%}">Marca</a></li>
+				<li class="navbase1"><a href="{%url 'agregar'%}">Agregar</a></li>
+				<li id="linklogout"><a href="{%url 'logout'%}">log out</a></li>
+			</h4>	
+		</ul>
+	</nav>
+	<div class="conten">
+		<h5>
+			{% block contenido %}
+			{% endblock %}
+
+		</h5>
+	</div>
+	<div class="conten2">
+		<h5>
+			{% block conten %}
+			{% endblock %}
+		</h5>
+	</div>
+</body>
+</html>

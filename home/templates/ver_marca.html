@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+	{{m.nombre}}
+{% endblock %}
+{% block contenido %}
+	
+		<h1>Detalle</h1>
+		<p><b>Nombre:</b>  {{m.nombre}}</p>
+		<br>
+		<button><a href=" {% url 'editar_marca' id_marc=m.id %} ">Editar</a></button>
+		<button><a href=" {% url 'eliminar_marca' id_marc=m.id %} ">Eliminar</a></button>
+	</div>
+	<a href="{% url 'categoria' %}">Regresar a la Lista</a>
+
+{% endblock %}
